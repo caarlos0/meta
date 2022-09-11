@@ -8,8 +8,8 @@ on:
         type: string
         default: ~1.19
 
-scan:
-  govulncheck:
+jobs:
+  scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
