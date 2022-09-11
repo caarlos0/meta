@@ -19,8 +19,8 @@ jobs:
           cache: true
       - name: install ruleguard
         run: |
-          go install -v github.com/quasilyte/go-ruleguard/cmd/ruleguard@latest
-          go get -v -u github.com/quasilyte/go-ruleguard/dsl@latest
+          go install github.com/quasilyte/go-ruleguard/cmd/ruleguard@latest
+          go get -u github.com/quasilyte/go-ruleguard/dsl@latest
       - name: get rules
         run: git clone https://github.com/dgryski/semgrep-go.git /tmp/rules
       - name: run
