@@ -10,8 +10,6 @@ on:
 
 permissions:
   contents: read
-  id-token: read
-  packages: read
 
 jobs:
   scan:
