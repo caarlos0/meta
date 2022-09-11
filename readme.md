@@ -10,3 +10,20 @@ Available workflows:
 
 
 [semgrep-go]: https://github.com/dgryski/semgrep-go
+
+## Usage
+
+```yaml
+# .github/workflows/example.yml
+# ...
+
+jobs:
+  govulncheck:
+    uses: caarlos0/meta/.github/workflows/govulncheck.yml@main
+  semgrep:
+    uses: caarlos0/meta/.github/workflows/semgrep.yml@main
+  ruleguard:
+    uses: caarlos0/meta/.github/workflows/ruleguard.yml@main
+
+# ...
+```
