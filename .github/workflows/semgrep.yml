@@ -13,5 +13,5 @@ jobs:
       - name: get rules
         run: git clone https://github.com/dgryski/semgrep-go.git /tmp/rules
       - name: run
-        run: semgrep -f /tmp/rules .
+        run: semgrep scan --error -f /tmp/rules .
 
