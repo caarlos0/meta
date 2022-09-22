@@ -19,14 +19,14 @@ Available workflows:
 
 jobs:
   govulncheck:
-    uses: caarlos0/meta/.github/workflows/govulncheck.yml@main
+    uses: caarlos0/meta/govulncheck.yml@main
     with:
       cache: true
       go-version: '>=1.19.1'
   semgrep:
-    uses: caarlos0/meta/.github/workflows/semgrep.yml@main
+    uses: caarlos0/meta/semgrep.yml@main
   ruleguard:
-    uses: caarlos0/meta/.github/workflows/ruleguard.yml@main
+    uses: caarlos0/meta/ruleguard.yml@main
     with:
       cache: true
       go-version: '>=1.19.1'
