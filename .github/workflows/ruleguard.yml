@@ -11,6 +11,10 @@ on:
         required: false
         type: boolean
         default: true
+      args:
+        required: false
+        type: string
+        default: '-disable largeloopcopy -disable urlredacted'
 
 permissions:
   contents: read
@@ -34,4 +38,4 @@ jobs:
           mv rules ../
           go install github.com/quasilyte/go-ruleguard/cmd/ruleguard@latest
           go get -u github.com/quasilyte/go-ruleguard/dsl@latest
-          ruleguard -c=0 -rules ../rules/ruleguard.rules.go -disable largeloopcopy -disable urlredacted ./...
+          ruleguard -c=0 -rules ../rules/ruleguard.rules.go ${{ inputs.args }} ./...
