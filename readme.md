@@ -20,10 +20,16 @@ Available workflows:
 jobs:
   govulncheck:
     uses: caarlos0/meta/.github/workflows/govulncheck.yml@main
+    with:
+      cache: true
+      go-version: '>=1.19.1'
   semgrep:
     uses: caarlos0/meta/.github/workflows/semgrep.yml@main
   ruleguard:
     uses: caarlos0/meta/.github/workflows/ruleguard.yml@main
-
+    with:
+      cache: true
+      go-version: '>=1.19.1'
+      args: '-disable largeloopcopy -disable urlredacted'
 # ...
 ```
