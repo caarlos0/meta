@@ -23,13 +23,15 @@ jobs:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3
         with:
           repository: dgryski/semgrep-go
-          path: ../rules
+          path: rules
       - uses: actions/setup-go@268d8c0ca0432bb2cf416faae41297df9d262d7f # v3
         with:
           go-version: ${{ inputs.go-version }}
           cache: ${{ inputs.cache }}
       - name: ruleguard
         run: |
+          # needs to be outside of the workspace for some reason
+          mv rules ../
           go install github.com/quasilyte/go-ruleguard/cmd/ruleguard@latest
           go get -u github.com/quasilyte/go-ruleguard/dsl@latest
           ruleguard -c=0 -rules ../rules/ruleguard.rules.go -disable largeloopcopy ./...
