@@ -14,7 +14,7 @@ on:
       args:
         required: false
         type: string
-        default: '-disable largeloopcopy -disable urlredacted'
+        default: ''
 
 permissions:
   contents: read
