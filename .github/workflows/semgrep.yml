@@ -13,8 +13,10 @@ jobs:
       image: returntocorp/semgrep
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3
-      - name: get rules
-        run: git clone https://github.com/dgryski/semgrep-go.git /tmp/rules
-      - name: run
-        run: semgrep scan --error --enable-nosem -f /tmp/rules .
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3
+        with:
+          repository: dgryski/semgrep-go
+          path: rules
+      - name: semgrep
+        run: semgrep scan --error --enable-nosem -f ./rules .
 
