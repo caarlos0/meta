@@ -9,7 +9,7 @@ on:
         default: '>=1.19.1'
       cache:
         required: false
-        type: bool
+        type: boolean
         default: true
 
 permissions:
