@@ -6,7 +6,7 @@ on:
       go-version:
         required: false
         type: string
-        default: '>=1.19.1'
+        default: stable
       cache:
         required: false
         type: boolean
