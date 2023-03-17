@@ -7,10 +7,6 @@ on:
         required: false
         type: string
         default: stable
-      cache:
-        required: false
-        type: boolean
-        default: true
       args:
         required: false
         type: string
@@ -31,7 +27,6 @@ jobs:
       - uses: actions/setup-go@4d34df0c2316fe8122ab82dc22947d607c0c91f9 # v4
         with:
           go-version: ${{ inputs.go-version }}
-          cache: ${{ inputs.cache }}
       - name: ruleguard
         run: |
           # needs to be outside of the workspace for some reason
