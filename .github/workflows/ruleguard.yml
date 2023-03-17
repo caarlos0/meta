@@ -28,7 +28,7 @@ jobs:
         with:
           repository: dgryski/semgrep-go
           path: rules
-      - uses: actions/setup-go@4d34df0c2316fe8122ab82dc22947d607c0c91f9 # v3
+      - uses: actions/setup-go@4d34df0c2316fe8122ab82dc22947d607c0c91f9 # v4
         with:
           go-version: ${{ inputs.go-version }}
           cache: ${{ inputs.cache }}
