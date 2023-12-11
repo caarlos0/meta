@@ -34,8 +34,7 @@ jobs:
           working-directory: ${{ inputs.working-directory }}
           go-version: ${{ inputs.go-version }}
       - name: ruleguard
-        with:
-          working-directory: ${{ inputs.working-directory }}
+        working-directory: ${{ inputs.working-directory }}
         run: |
           # needs to be outside of the workspace for some reason
           mv rules ../

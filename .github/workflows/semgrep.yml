@@ -24,6 +24,5 @@ jobs:
           repository: dgryski/semgrep-go
           path: rules
       - name: semgrep
-        with:
-          working-directory: ${{ inputs.working-directory }}
+        working-directory: ${{ inputs.working-directory }}
         run: semgrep scan --error --enable-nosem -f ./rules .
