@@ -23,8 +23,8 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v3
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v3
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
         with:
           working-directory: ${{ inputs.working-directory }}
           repository: dgryski/semgrep-go
