@@ -10,11 +10,6 @@ permissions:
   contents: read
 
 jobs:
-  govulncheck:
-    uses: caarlos0/meta/.github/workflows/govulncheck.yml@main
-    with:
-      cache: false
-      go-version: stable
   semgrep:
     uses: caarlos0/meta/.github/workflows/semgrep.yml@main
   ruleguard:
@@ -22,4 +17,3 @@ jobs:
     with:
       cache: false
       go-version: stable
-
